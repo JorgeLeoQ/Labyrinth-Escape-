@@ -63,7 +63,7 @@ namespace Labyrinth
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             Save.LoadBestTime();
-            startGame();
+            loadLevel();
             character = new Character(this.GraphicsDevice);
             
             LoadLabel();
@@ -84,7 +84,7 @@ namespace Labyrinth
                 Exit();
             if (C.gameStatus == GameStatus.ENDLEVEL)
             {
-                startGame();
+                loadLevel();
 
                 base.Update(gameTime);
                 return;
@@ -95,7 +95,7 @@ namespace Labyrinth
                 if (startButton.Click())
                 {
                     C.gameStatus = GameStatus.PLAY;
-                    startGame();
+                    loadLevel();
                     C.keys = 0;
                     C.life = 3;
                     C.timeElapsed = 0;
@@ -164,7 +164,7 @@ namespace Labyrinth
                 {
                     C.gameStatus = GameStatus.PLAY;
                     C.level = 0;
-                    startGame();
+                    loadLevel();
                     C.keys = 0;
                     C.life = 3;
                     C.timeElapsed = 0;
@@ -181,7 +181,7 @@ namespace Labyrinth
                 {
                     C.gameStatus = GameStatus.PLAY;
                     C.level = 0;
-                    startGame();
+                    loadLevel();
                     C.keys = 0;
                     C.life = 3;
                     C.timeElapsed = 0;
@@ -200,19 +200,13 @@ namespace Labyrinth
                 case GameStatus.PLAY:
                     GraphicsDevice.Clear(Color.CornflowerBlue);
 
-                    DrawC.DrawLabyrinth(_spriteBatch);
+                    DrawPlayStatus.DrawLabyrinth(_spriteBatch);
 
-                    DrawC.DrawBullets(_spriteBatch);
+                    DrawPlayStatus.DrawBullets(_spriteBatch);
 
-                    foreach(Life life in C.listLife)
-                    {
-                        _spriteBatch.Draw(C.lifeImag, life.HealthPosA, Color.White);
-                    }
+                    DrawPlayStatus.DrawKey(_spriteBatch);
 
-                    foreach(Key key in C.listKeys)
-                    {
-                        _spriteBatch.Draw(C.keyImag, key.KeyPosA, Color.White);
-                    }
+                    DrawPlayStatus.DrawLife(_spriteBatch);
 
                     timeLabel.Draw();
                     levelLabel.Draw();

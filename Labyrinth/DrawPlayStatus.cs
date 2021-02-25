@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Labyrinth
 {
-    public static class DrawC
+    public static class DrawPlayStatus
     {
         public static void DrawLabyrinth(SpriteBatch _spriteBatch)
         {
@@ -91,6 +91,23 @@ namespace Labyrinth
                     C.isExplotion = false;
                     Thread.Sleep(1000);
                 }
+            }
+        }
+
+        public static void DrawLife(SpriteBatch _spriteBatch)
+        {
+            foreach (Life life in C.listLife)
+            {
+                _spriteBatch.Draw(C.lifeImag, life.HealthPosA, Color.White);
+            }
+        }
+
+        public static void DrawKey(SpriteBatch _spriteBatch)
+        {
+
+            foreach (Key key in C.listKeys)
+            {
+                _spriteBatch.Draw(C.keyImag, key.KeyPosA, Color.White);
             }
         }
     }

@@ -19,8 +19,6 @@ namespace Labyrinth
         SpriteFont labelFont;
         Vector2 stringPos;
 
-
-
         public Label(Vector2 pos, Point dim, SpriteBatch sBatch, Color bC, string Str, GraphicsDevice gD, SpriteFont bF)
         {
             position = pos;
@@ -30,14 +28,10 @@ namespace Labyrinth
             graphicsDev = gD;
             labelFont = bF;
             Vector2 fontSize = labelFont.MeasureString(labelString);
-
-
             rect = new Texture2D(gD, dimension.X, dimension.Y);
-
             Color[] data = new Color[dimension.X * dimension.Y];
             for (int i = 0; i < data.Length; ++i) data[i] = labelColor;
             rect.SetData(data);
-
             stringPos = new Vector2((rect.Width - fontSize.X) / 2 + position.X, (rect.Height - fontSize.Y) / 2 + position.Y);
         }
 

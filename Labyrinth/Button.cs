@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Labyrinth
 {
+    //Class that allows the addition of buttons and manage the click on them
     public class Button
     {
         public Vector2 position;

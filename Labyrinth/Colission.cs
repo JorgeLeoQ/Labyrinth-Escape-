@@ -15,7 +15,7 @@ namespace Labyrinth
             
         public static void ColissionBull()
         {
-            //Gestione dei movimenti del proiettile
+            //Collision management between the character and the bullet
             foreach (Bullet bullet in C.listBulletR)
             {
                 if (bullet.X > (bullet.StartPos.X - bullet.Bound))
@@ -154,6 +154,7 @@ namespace Labyrinth
             }
         }
 
+        //life collection management
         public static void ColissionLive()
         {
             for(int i = 0; i < C.listLife.Count; i++)
@@ -167,6 +168,7 @@ namespace Labyrinth
             }
         }
 
+        //key collection management
         public static void CollisionKey()
         {
             for(int i = 0; i < C.listKeys.Count; i++)

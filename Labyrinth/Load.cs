@@ -11,6 +11,7 @@ namespace Labyrinth
 {
     public static class Load
     {
+        //Load information about Bullets
         public static void LoadBullets()
         {
             Vector2 pos = C.ORGLAB;
@@ -40,6 +41,8 @@ namespace Labyrinth
                 }
             }
         }
+
+        //Load information about life
         public static void LoadLives()
         {
             int count = 0;
@@ -67,6 +70,47 @@ namespace Labyrinth
                     }
                 }
             }
+        }
+
+        //Load information about maze and position guy
+        public static void LoadMaze(string[] lines)
+        {
+            char[] line = lines[0].ToCharArray();
+            C.colsNb = line.GetLength(0);
+            C.rowsNb = lines.GetLength(0);
+
+            C.ORGLAB = new Vector2((C.DISPLAYDIM.X - C.colsNb * C.multFactor) / 2,
+                                 (C.DISPLAYDIM.Y - C.rowsNb * C.multFactor) / 2);
+
+            C.lbrnt = new int[(int)C.rowsNb, (int)C.colsNb];
+
+            for (int i = 0; i < C.rowsNb; i++)
+            {
+                line = lines[i].ToCharArray();
+                for (int j = 0; j < C.colsNb; j++)
+                {
+                    C.lbrnt[i, j] = line[j];
+                    if (C.lbrnt[i, j] == '0')
+                    {
+                        if (j == 0)
+                        {
+                            C.startGuyPos = C.guyPos = new Point(i, 0);
+                        }
+                    }
+                    else if (C.lbrnt[i, j] == 'P')
+                    {
+                        if (j == C.colsNb - 1)
+                        {
+                            C.endGuyPos = new Point(i, C.colsNb - 1);
+                        }
+                    }
+                }
+                C.labText = new Texture2D[((int)(C.rowsNb) * (int)C.multFactor),
+                                          ((int)C.colsNb * (int)C.multFactor)];
+                if (C.gameStatus != GameStatus.MENU)
+                    C.gameStatus = GameStatus.PLAY;
+            }
+
         }
     }
 }

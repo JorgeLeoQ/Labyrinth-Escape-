@@ -8,6 +8,7 @@ namespace Labyrinth
 {
     public static class DrawText
     {
+        //Handles the strings on the screen
         public static void DrawFinalString(SpriteBatch _spriteBatch)
         {
             _spriteBatch.DrawString(C.font, "CONGRATULATION", new Vector2(550, 100), Color.Black);

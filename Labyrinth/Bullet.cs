@@ -25,7 +25,7 @@ namespace Labyrinth
             this.bulletPosR = bulletPosR;
             this.movePosR = bulletPosR;
             this.direction = direction;
-            this.bound = this.FindBound(direction);
+            this.bound = this.FindBound();
             this.hitBox = new Rectangle(bulletPosR.X, bulletPosR.Y, 20, 20);
         }
 
@@ -60,8 +60,8 @@ namespace Labyrinth
 
         }
 
-        //Mi permette di stabile entro quanto la mia bomba puo muoversi 
-        private float FindBound(Direction dir)
+        //Private method that calculates the distance between the cannon and the opposite wall
+        private float FindBound()
         {
             int i;
             Point tempP = bulletPosR;
