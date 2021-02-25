@@ -8,6 +8,7 @@ namespace Labyrinth
 {
     public partial class Game1
     {
+        private string fileName= "C://Users//Jorge//Desktop//Labyrinth//Labyrinth-Escape-//Labyrinth//Content//labirinto" + C.level.ToString() + ".txt";
         public void startGame()
         {
 
@@ -22,8 +23,6 @@ namespace Labyrinth
             C.padlockImag = Content.Load<Texture2D>("Padlock");
             lifeImag = Content.Load<Texture2D>("HeartL");
             keyImag = Content.Load<Texture2D>("Key");
-
-            string fileName = "C://Users//Jorge//Desktop//Labyrinth//Labyrinth-Escape-//Labyrinth//Content//labirinto" + C.level.ToString() + ".txt";
 
             string[] lines = File.ReadAllLines(fileName);
 
