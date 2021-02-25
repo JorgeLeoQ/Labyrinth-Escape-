@@ -13,8 +13,6 @@ namespace Labyrinth
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        Texture2D lifeImag;
-        Texture2D keyImag;
         Character character;
         Texture2D labImage;
         Texture2D finalScoreImag;
@@ -208,19 +206,19 @@ namespace Labyrinth
 
                     foreach(Life life in C.listLife)
                     {
-                        _spriteBatch.Draw(lifeImag, life.HealthPosA, Color.White);
+                        _spriteBatch.Draw(C.lifeImag, life.HealthPosA, Color.White);
                     }
 
                     foreach(Key key in C.listKeys)
                     {
-                        _spriteBatch.Draw(keyImag, key.KeyPosA, Color.White);
+                        _spriteBatch.Draw(C.keyImag, key.KeyPosA, Color.White);
                     }
 
                     timeLabel.Draw();
                     levelLabel.Draw();
                     health.Draw();
-                    _spriteBatch.Draw(lifeImag, new Rectangle(30,40, 60, 60), Color.White);
-                    _spriteBatch.Draw(keyImag, new Rectangle(30, 100, 60, 60), Color.White);
+                    _spriteBatch.Draw(C.lifeImag, new Rectangle(30,40, 60, 60), Color.White);
+                    _spriteBatch.Draw(C.keyImag, new Rectangle(30, 100, 60, 60), Color.White);
                     keyLabel.Draw();
                     backMenu2Button.Draw();
                     character.Draw(_spriteBatch);

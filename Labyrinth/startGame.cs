@@ -21,8 +21,8 @@ namespace Labyrinth
             C.cannonD = Content.Load<Texture2D>("CannoneD");
             C.bulletImag = Content.Load<Texture2D>("Bullet");
             C.padlockImag = Content.Load<Texture2D>("Padlock");
-            lifeImag = Content.Load<Texture2D>("HeartL");
-            keyImag = Content.Load<Texture2D>("Key");
+            C.lifeImag = Content.Load<Texture2D>("HeartL");
+            C.keyImag = Content.Load<Texture2D>("Key");
 
             string[] lines = File.ReadAllLines(fileName);
 

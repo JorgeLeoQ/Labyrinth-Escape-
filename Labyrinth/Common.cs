@@ -21,6 +21,8 @@ namespace Labyrinth
         public static Texture2D cannonR;
         public static Texture2D bulletImag;
         public static Texture2D padlockImag;
+        public static Texture2D lifeImag;
+        public static Texture2D keyImag;
         //matice del labirinto 
         public static int[,] lbrnt;
         public static int rowsNb, colsNb;
@@ -50,18 +52,6 @@ namespace Labyrinth
         public static int level = 0;
         public static int MAXLEVEL = 2;
 
-        public static Point PIXELPOINT = new Point(40, 40);
-        public static Point WINDOWOFFSET = new Point(100, 50);
-
-        public static int fluid_count;
-
-        public static List<Cannon> listCannon = new List<Cannon>();
-        //liste cannoni
-        //public static List<Cannon> listCannonL = new List<Cannon>();
-        //public static List<Cannon> listCannonR = new List<Cannon>();
-        //public static List<Cannon> listCannonU = new List<Cannon>();
-        //public static List<Cannon> listCannonD = new List<Cannon>();
-
         //Liste proiettile
         public static List<Bullet> listBulletL = new List<Bullet>();
         public static List<Bullet> listBulletR = new List<Bullet>();
@@ -74,11 +64,6 @@ namespace Labyrinth
         public static List<Key> listKeys = new List<Key>();
         public static uint keys = 0;
 
-        public static Texture2D cannon;
-        public static Texture2D cannons;
-        public static Texture2D bullet;
-        public static Texture2D bullets;
-
         //Sound Effect
         public static Song song;
         public static SoundEffect explotionEffect;
@@ -89,7 +74,6 @@ namespace Labyrinth
 
         public static bool isExplotion = false;
 
-        public static string pathBestTime = @"C:\Users\Jorge\Desktop\Labyrinth\Labyrinth-Escape-\Labyrinth\Content\BestScore.txt";
         public static int bestTime;
 
         public static double timeElapsed;
