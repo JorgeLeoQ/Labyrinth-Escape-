@@ -23,6 +23,29 @@ namespace Labyrinth
         public static Texture2D padlockImag;
         public static Texture2D lifeImag;
         public static Texture2D keyImag;
+        public static Texture2D labImage;
+        public static Texture2D finalScoreImag;
+        public static Texture2D gameOver;
+        public static Texture2D background;
+        public static Texture2D creditsImage;
+        public static Texture2D instructionImage;
+
+        //Label 
+        public static Label timeLabel;
+        public static Label health;
+        public static Label keyLabel;
+        public static Label levelLabel;
+
+        //Button
+        public static Button startButton;
+        public static Button instructionButton;
+        public static Button quitButton;
+        public static Button creditButton;
+        public static Button backMenuButton;
+        public static Button backMenu2Button;
+        public static Button backMenu3Button;
+        public static Button retry;
+
         //matice del labirinto 
         public static int[,] lbrnt;
         public static int rowsNb, colsNb;
@@ -80,7 +103,5 @@ namespace Labyrinth
         public static double finalTime;
 
         public static bool isBest;
-
-
     }
 }
