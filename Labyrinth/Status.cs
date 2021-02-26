@@ -45,13 +45,13 @@ namespace Labyrinth
                     C.creditButton.Draw();
                     break;
                 case GameStatus.INSTRUCTION:
-                    GraphicsDevice.Clear(Color.AntiqueWhite);
+                    GraphicsDevice.Clear(Color.Green);
                     _spriteBatch.Draw(C.instructionImage,
                         new Rectangle(new Point(((int)C.DISPLAYDIM.X - 1500) / 2, 0), new Point(1500, 900)), new Rectangle(new Point(0, 0), new Point(C.instructionImage.Width, C.instructionImage.Height)), Color.White);
                     C.backMenuButton.Draw();
                     break;
                 case GameStatus.CREDITS:
-                    GraphicsDevice.Clear(Color.AntiqueWhite);
+                    GraphicsDevice.Clear(Color.Green);
                     _spriteBatch.Draw(C.creditsImage,
                         new Rectangle(new Point(((int)C.DISPLAYDIM.X - 1500) / 2, 0), new Point(1500, 900)), new Rectangle(new Point(0, 0), new Point(C.creditsImage.Width, C.creditsImage.Height)), Color.White);
                     C.backMenuButton.Draw();

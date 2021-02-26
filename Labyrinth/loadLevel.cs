@@ -92,9 +92,9 @@ namespace Labyrinth
                     C.level = 0;
                 }
                 //Gestisce la collissione con le palottole.
-                Colission.ColissionBull();
-                Colission.ColissionLive();
-                Colission.CollisionKey();
+                Collision.CollisionBullet();
+                Collision.CollisionLife();
+                Collision.CollisionKey();
             }
 
             if (C.gameStatus == GameStatus.INSTRUCTION)
