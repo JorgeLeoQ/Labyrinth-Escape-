@@ -43,3 +43,48 @@ Below the most significant classes of the videogame:
 
 <b><h2>The main classes</b></h2>
 
+***game1***: derived from Game and so it is the entry-point class of the game. Contains game initialization, the state and level management. The Update() and Draw() methods of the MonoGame framework are implemented within it.
+
+***Bullet***: sprite of bullets fired from cannons. This class contains information on the position of the bullet and the direction in which it is fired (through an enumerative data type). Furthermore, this class contains a private method which allows to calculate the field in which it can move. This method is called when the object of type bullet is instantiated and put into a list.
+
+***Button***: This class allows the addition of button on the screen. It contains the following fields: position, size, color and the string positioned above the button. The two methods it implements are the following:
+	-	*Click()*: manages the click on the button and changes color when the cursor passes over it.
+	-	*Draw()*: to draw it on the screen.
+
+***Label***: This class allows the addition of label on the screen. It contains the following fields: position, size, color and the string representing the label. The method it implements is the following: 
+	-	*Draw()*: to draw it on the screen.
+	
+***Key***: This sprite represents the key. The class contains the location of the key inside the maze.
+
+***Life***: This sprite represents the single life. At the beginning of each level a certain number of lives are instantiated (it can change from a minimum of 1 to a maximum of 5 lives per level) that the character can collect to increase his health. This class contains information on the location of each individual life.
+
+***Collision***: This static class handles collisions with the character. In particular, this implements the following methods: 
+	-	*CollisionBullet()*: When the character collides with a bullet, he loses a life and starts over from the beginning
+	-	*CollisionKey()*: When the character encounters a key, it is deleted from the labyrinth and increasing the number of keys held
+	-	*CollisionLife()*: When the character encounters a heart, it is deleted from the labyrinth and increasing the number of hearts held.
+
+***Save***: This class manages a txt file in which the best time is saved in crossing the maze. when the game starts it is loaded and when a single game ends it updates if the time is less.
+
+***Character***: This class allows to create a character capable of moving in the game and interacting with the obstacles on the map. Each Character object can be manipulated from the keyboard with WASD commands thanks to the method keyboardMgnt.
+
+***Animation***: award to each individual sprite an animation given by the succession of frames which are grouped in a single texture. The animation technique is based on showing only a portion of the texture in which the frame you want to view is present.
+
+![Class Diagram](media/character.PNG)
+
+<b><h2>The states of the game</b></h2>
+
+To manage the different game states, an enumerative variable was used. The initial state is set inside the Game1 class in the LoadContent() method and in the Draw() and Update() methods of Game1 handle the different gameStatus.
+
+![Class Diagram](media/gameStatus.PNG)
+
+- *MENU*: The main menu contains the buttons to reach the following states: Play, Instruction, Credits and close the game.
+
+![Class Diagram](media/menu1.PNG)
+
+- *INSTRUCTION*: This screen explains the game mode and purpose. Adding a button to return to the main menu.
+
+![Class Diagram](media/menu2.PNG)
+
+- *CREDITS*: Mention the sources that have been used (sound effect, sprite). Adding a button to return to the main menu.
+
+![Class Diagram](media/menu3.PNG)
