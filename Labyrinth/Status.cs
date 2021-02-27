@@ -128,7 +128,7 @@ namespace Labyrinth
                 _spriteBatch.Draw(C.bulletImag, bullut.bulletPosA, Color.White);
                 if (C.isExplotion)
                 {
-                    C.guyPos = C.startGuyPos;
+                    //C.guyPos = C.startGuyPos;
                     C.isExplotion = false;
                     Thread.Sleep(1000);
                 }
@@ -138,7 +138,7 @@ namespace Labyrinth
                 _spriteBatch.Draw(C.bulletImag, bullut.bulletPosA, Color.White);
                 if (C.isExplotion)
                 {
-                    C.guyPos = C.startGuyPos;
+                    //C.guyPos = C.startGuyPos;
                     C.isExplotion = false;
                     Thread.Sleep(1000);
                 }
@@ -148,7 +148,7 @@ namespace Labyrinth
                 _spriteBatch.Draw(C.bulletImag, bullut.bulletPosA, Color.White);
                 if (C.isExplotion)
                 {
-                    C.guyPos = C.startGuyPos;
+                    //C.guyPos = C.startGuyPos;
                     C.isExplotion = false;
                     Thread.Sleep(1000);
                 }
@@ -158,7 +158,7 @@ namespace Labyrinth
                 _spriteBatch.Draw(C.bulletImag, bullut.bulletPosA, Color.White);
                 if (C.isExplotion)
                 {
-                    C.guyPos = C.startGuyPos;
+                    //C.guyPos = C.startGuyPos;
                     C.isExplotion = false;
                     Thread.Sleep(1000);
                 }

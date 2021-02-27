@@ -270,7 +270,7 @@
 /processorParam:TextureFormat=Color
 /build:mainChar.png
 
-#begin Padlock.PNG
+#begin Padlock.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -280,7 +280,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Padlock.PNG
+/build:Padlock.png
 
 #begin Parchment.PNG
 /importer:TextureImporter
