@@ -79,7 +79,9 @@ To manage the different game states, an enumerative variable was used. The initi
 
 - *MENU*: The main menu contains the buttons to reach the following states: Play, Instruction, Credits and close the game.
 
+<p align="center">
 ![Class Diagram](media/menu1.PNG)
+</p>
 
 - *INSTRUCTION*: This screen explains the game mode and purpose. Adding a button to return to the main menu.
 
