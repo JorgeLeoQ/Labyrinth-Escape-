@@ -88,3 +88,11 @@ To manage the different game states, an enumerative variable was used. The initi
 - *CREDITS*: Mention the sources that have been used (sound effect, sprite). Adding a button to return to the main menu.
 
 ![Class Diagram](media/menu3.PNG)
+
+<b><h2>Conclusion and future developments</b></h2>
+
+The development of this game has been very important for the understanding and practice of creating 2D games using the C# language and Monogame.
+
+A control system was used for the development of this game, Git version control system (VCS). In this case I did a single job, but it is very important if you do teamwork.
+
+Labyrinth escape can still be improved and expanded. I thought it would be interesting to implement a recurse system of game state to recover an interrupted game. Also, in order to broaden the perspective of game, it may be useful to add new maps, and new traps. 
