@@ -19,6 +19,13 @@
 /processorParam:Quality=Best
 /build:African_Musicic_SFX.wav
 
+#begin back.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:back.spritefont
+
 #begin background.PNG
 /importer:TextureImporter
 /processor:TextureProcessor

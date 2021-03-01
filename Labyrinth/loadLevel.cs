@@ -256,11 +256,12 @@ namespace Labyrinth
         {
             C.font = Content.Load<SpriteFont>("Font");
             SpriteFont f = Content.Load<SpriteFont>("ButtonFont");
+            SpriteFont liteF = Content.Load<SpriteFont>("back");
             C.startButton = new Button(new Vector2(100, 250), new Point(300, 100), _spriteBatch, Color.Green, Color.Aqua, "START", this.GraphicsDevice, f);
             C.instructionButton = new Button(new Vector2(100, 400), new Point(300, 100), _spriteBatch, Color.Green, Color.Aqua, "INSTRUCTION", this.GraphicsDevice, f);
             C.quitButton = new Button(new Vector2(100, 550), new Point(300, 100), _spriteBatch, Color.Green, Color.Aqua, "QUIT", this.GraphicsDevice, f);
             C.creditButton = new Button(new Vector2(100, 700), new Point(300, 100), _spriteBatch, Color.Green, Color.Aqua, "CREDITS", this.GraphicsDevice, f);
-            C.backMenu2Button = new Button(new Vector2(1390, 600), new Point(200, 100), _spriteBatch, Color.Green, Color.Aqua, "BACK\nMENU", this.GraphicsDevice, f);
+            C.backMenu2Button = new Button(new Vector2(40, 600), new Point(130, 70), _spriteBatch, Color.Green, Color.Aqua, "BACK\nMENU", this.GraphicsDevice, liteF);
             C.backMenu3Button = new Button(new Vector2(900, 500), new Point(250, 100), _spriteBatch, Color.Green, Color.Aqua, "BACK\nMENU", this.GraphicsDevice, f);
             C.retry = new Button(new Vector2(400, 500), new Point(250, 100), _spriteBatch, Color.Green, Color.Aqua, "RETRY", this.GraphicsDevice, f);
             C.backMenuButton = new Button(new Vector2(650, 700), new Point(300, 100), _spriteBatch, Color.Green, Color.Aqua, "BACK\nMENU", this.GraphicsDevice, f);
@@ -292,9 +293,9 @@ namespace Labyrinth
 
         private void LoadLabel()
         {
-            C.levelLabel = new Label(new Vector2(1360, 20), new Point(200, 100), _spriteBatch, Color.Transparent, "Level: ", GraphicsDevice, Content.Load<SpriteFont>("ButtonFont"));
+            C.levelLabel = new Label(new Vector2(1420, 20), new Point(120, 100), _spriteBatch, Color.Transparent, "Level: ", GraphicsDevice, Content.Load<SpriteFont>("ButtonFont"));
 
-            C.timeLabel = new Label(new Vector2(1360, 80), new Point(200, 100), _spriteBatch, Color.Transparent, "Time: ", GraphicsDevice, Content.Load<SpriteFont>("ButtonFont"));
+            C.timeLabel = new Label(new Vector2(1420, 80), new Point(120, 100), _spriteBatch, Color.Transparent, "Time: ", GraphicsDevice, Content.Load<SpriteFont>("ButtonFont"));
 
             C.health = new Label(new Vector2(40, 20), new Point(200, 100), _spriteBatch, Color.Transparent, "Life: ", GraphicsDevice, Content.Load<SpriteFont>("ButtonFont"));
 
