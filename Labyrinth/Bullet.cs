@@ -102,7 +102,7 @@ namespace Labyrinth
                         }
                         else
                         {
-                            return ((float)i * C.multFactor + 40);
+                            return (((float)i * C.multFactor) + 50 );
                         }
                     }
                     break;
