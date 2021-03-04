@@ -73,7 +73,7 @@ namespace Labyrinth
         public static int step = (int) multFactor / FRAMEXROW;
         public static GameStatus gameStatus;
         public static int level = 0;
-        public static int MAXLEVEL = 2;
+        public static int MAXLEVEL = 3;
 
         //Liste proiettile
         public static List<Bullet> listBulletL = new List<Bullet>();
